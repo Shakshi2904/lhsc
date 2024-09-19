@@ -1,0 +1,60 @@
+.feedback-faces {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .face-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .face-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .face-btn.selected {
+    background-color: #f0f0f0;
+  }
+  
+  .face {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+  }
+  
+  .face-0 {
+    background-image: url('/public/p1.png');
+  }
+  
+  .face-1 {
+    background-image: url('/public/p1.png');
+  }
+  
+  .face-2 {
+    background-image: url('/public/p1.png');
+  }
+  
+  .face-3 {
+    background-image: url('/public/p1.png');
+  }
+  
+  .face-4 {
+    background-image: url('/public/p1.png');
+  }
+  
+  .faces-hint {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+  

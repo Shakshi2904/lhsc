@@ -1,0 +1,177 @@
+/* src/components/Testimonial.css */
+.ezy__testimonial2 {
+	/* Bootstrap variables */
+	--bs-body-color: #2b323c;
+	--bs-body-bg: rgb(255, 255, 255);
+
+	/* Easy Frontend variables */
+	--ezy-theme-color: rgb(13, 110, 253);
+	--ezy-theme-color-rgb: 13, 110, 253;
+	--ezy-item-bg: #ffffff;
+	--ezy-item-shadow: 0px 8px 44px rgba(227, 238, 255, 0.48);
+	--ezy-rating-rgb: 255, 215, 0;
+
+	background-color: var(--bs-body-bg);
+	overflow: hidden;
+	padding: 30px 0; /* Reduced padding */
+}
+
+@media (min-width: 768px) {
+	.ezy__testimonial2 {
+		padding: 60px 0; /* Reduced padding */
+	}
+}
+
+/* Gray Block Style */
+.gray .ezy__testimonial2,
+.ezy__testimonial2.gray {
+	/* Bootstrap variables */
+	--bs-body-bg: rgb(246, 246, 246);
+
+	/* Easy Frontend variables */
+	--ezy-item-bg: #fff;
+	--ezy-item-shadow: 0px 4px 44px rgba(179, 209, 236, 0.37);
+}
+
+/* Dark Gray Block Style */
+.dark-gray .ezy__testimonial2,
+.ezy__testimonial2.dark-gray {
+	/* Bootstrap variables */
+	--bs-body-color: #ffffff;
+	--bs-body-bg: rgb(30, 39, 53);
+
+	/* Easy Frontend variables */
+	--ezy-item-bg: rgb(11, 23, 39);
+	--ezy-item-shadow: none;
+}
+
+/* Dark Block Style */
+.dark .ezy__testimonial2,
+.ezy__testimonial2.dark {
+	/* Bootstrap variables */
+	--bs-body-color: #ffffff;
+	--bs-body-bg: rgb(11, 23, 39);
+
+	/* Easy Frontend variables */
+	--ezy-item-bg: rgb(30, 39, 53);
+	--ezy-item-shadow: none;
+}
+
+.ezy__testimonial2-heading {
+	font-weight: bold;
+	font-size: 18px; /* Reduced font size */
+	line-height: 22px; /* Adjusted line height */
+	color: var(--bs-body-color);
+}
+
+@media (min-width: 768px) {
+	.ezy__testimonial2-heading {
+		font-size: 30px; /* Reduced font size */
+		line-height: 34px; /* Adjusted line height */
+	}
+}
+
+.ezy__testimonial2-sub-heading {
+	font-size: 14px; /* Reduced font size */
+	line-height: 20px; /* Adjusted line height */
+	color: var(--bs-body-color);
+	opacity: 0.8;
+}
+
+.ezy__testimonial2-item {
+	background-color: var(--ezy-item-bg);
+	box-shadow: var(--ezy-item-shadow);
+	border-radius: 15px; /* Reduced border radius */
+	border: none;
+}
+
+.ezy__testimonial2-card
+	[class*="col-"]:nth-of-type(1n)
+	.ezy__testimonial2-icon {
+	color: #ffffff;
+	background-color: rgba(252, 110, 92, 1);
+}
+
+.ezy__testimonial2-card
+	[class*="col-"]:nth-of-type(2n)
+	.ezy__testimonial2-icon {
+	color: #ffffff;
+	background-color: rgba(103, 58, 183, 1);
+}
+
+.ezy__testimonial2-card
+	[class*="col-"]:nth-of-type(3n)
+	.ezy__testimonial2-icon {
+	color: #ffffff;
+	background-color: rgba(13, 110, 253, 1);
+}
+
+.ezy__testimonial2-card
+	[class*="col-"]:nth-of-type(4n)
+	.ezy__testimonial2-icon {
+	color: #ffffff;
+	background-color: rgba(6, 203, 140, 1);
+}
+
+.ezy__testimonial2-icon {
+	width: 50px; /* Reduced width */
+	height: 50px; /* Reduced height */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--ezy-theme-color);
+	border-radius: 50%;
+	box-shadow: 0px 3px 12px rgba(179, 209, 236, 0.37); /* Adjusted shadow */
+	margin: auto;
+}
+
+.ezy__testimonial2-content {
+	font-size: 14px; /* Reduced font size */
+	line-height: 22px; /* Adjusted line height */
+	color: var(--bs-body-color);
+	opacity: 0.8;
+}
+
+.ezy__testimonial2-content::before {
+	content: '"';
+	font-size: 30px; /* Reduced font size */
+	color: var(--ezy-theme-color);
+	display: block;
+	position: absolute;
+	left: 1rem; /* Adjusted position */
+	top: 0;
+}
+
+.ezy__testimonial2-content::after {
+	content: '"';
+	font-size: 30px; /* Reduced font size */
+	color: var(--ezy-theme-color);
+	display: block;
+	position: absolute;
+	right: 1rem; /* Adjusted position */
+	bottom: -0.5rem; /* Adjusted position */
+}
+
+.ezy_testimonial2-item .ezy_testimonial2-icon img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.ezy_testimonial2-item .ezy_testimonial2-content {
+	position: relative;
+	padding: 1.5rem; /* Reduced padding */
+}
+
+.ezy_testimonial2-item .ezy_testimonial2-title {
+	font-weight: 500;
+	font-size: 16px; /* Reduced font size */
+}
+
+.ezy__testimonial2-rating {
+	color: var(--ezy-theme-color);
+	font-size: 14px; /* Reduced font size */
+	line-height: 22px; /* Adjusted line height */
+	opacity: 0.7;
+}

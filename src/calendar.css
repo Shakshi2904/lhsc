@@ -1,0 +1,131 @@
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: rgb(243 244 246);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.calendar-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+.react-calendar {
+  max-width: 400px;
+  margin: 0 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  position: relative;
+}
+
+.react-calendar__tile {
+  border-radius: 8px;
+  position: relative;
+}
+
+.has-events {
+  position: relative;
+}
+
+.has-events::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px; /* Increased circle size */
+  height: 30px; /* Increased circle size */
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1); /* Light highlight color */
+  border: 1px solid #000; /* Circle border color */
+  z-index: 1; /* Ensure the circle is above other content */
+}
+
+.has-events::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; /* Adjust position to move the dot below the date */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.has-events::after::before {
+  content: '';
+  width: 8px; /* Highlight size */
+  height: 8px; /* Highlight size */
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2); /* Highlight color with transparency */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.has-events::after::after {
+  content: '';
+  width: 6px; /* Dot size */
+  height: 6px; /* Dot size */
+  border-radius: 50%;
+  background-color: #000; /* Dot color */
+  position: relative;
+  z-index: 1; /* Ensure the dot appears above the highlight */
+}
+
+.events-popup {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-width: 300px;
+  margin-top: 10px; /* Space between the calendar and the popup */
+}
+
+.events-popup h2 {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.events-popup ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.events-popup li {
+  background-color: #e0f7fa;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: #00796b;
+}
+
+.events-popup p {
+  color: #999;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  backdrop-filter: blur(5px); /* Blur effect */
+  z-index: 900; /* Behind the popup */
+}
