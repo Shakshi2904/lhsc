@@ -2,14 +2,14 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className=" shadow-md border-b"  style={{ backgroundColor: '#F5D2E6' }}>
-      <div className="container mx-auto flex items-center justify-between px-4">
+    <nav className=" shadow-md border-b bg-[rgb(256,226,226)]">
+      <div className="container mx-auto flex items-center justify-between ">
      
         <div className="flex items-center">
           <img
             src="/image/logo.png" 
             alt="Logo"
-            className="h-16 w-auto"
+            className="h-16"
           />
         </div>
 

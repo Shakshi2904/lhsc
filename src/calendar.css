@@ -1,37 +1,44 @@
 .App {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: rgb(243 244 246);
+  background-color: rgb(256, 226, 226);
+  padding-bottom: 5vh; /* Added padding to prevent sticking at the bottom */
 }
 
 h1 {
   color: #333;
   margin-bottom: 20px;
+  font-size: 32px; /* Increased font size */
+  font-weight: bold; /* Made the heading bold */
+  padding-top: 5vh;
+}
+
+.calendar-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allow items to wrap */
 }
 
 .calendar-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  position: relative;
-}
-
-.react-calendar {
-  max-width: 400px;
+  max-width: 600px;
   margin: 0 20px;
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  position: relative;
+  font-size: 18px; /* Increased font size */
+  padding: 2vh;
+}
+
+.react-calendar {
+  width: 100%; /* Make calendar take full width */
+  line-height: 1.5em;
 }
 
 .react-calendar__tile {
   border-radius: 8px;
   position: relative;
-}
-
-.has-events {
-  position: relative;
+  font-size: 16px;
 }
 
 .has-events::before {
@@ -40,45 +47,22 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 30px; /* Increased circle size */
-  height: 30px; /* Increased circle size */
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.1); /* Light highlight color */
-  border: 1px solid #000; /* Circle border color */
-  z-index: 1; /* Ensure the circle is above other content */
-}
-
-.has-events::after {
-  content: '';
-  position: absolute;
-  bottom: -8px; /* Adjust position to move the dot below the date */
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.has-events::after::before {
-  content: '';
-  width: 8px; /* Highlight size */
-  height: 8px; /* Highlight size */
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.2); /* Highlight color with transparency */
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #000;
+  z-index: 1;
 }
 
 .has-events::after::after {
   content: '';
-  width: 6px; /* Dot size */
-  height: 6px; /* Dot size */
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background-color: #000; /* Dot color */
+  background-color: #000;
   position: relative;
-  z-index: 1; /* Ensure the dot appears above the highlight */
+  z-index: 1;
 }
 
 .events-popup {
@@ -93,7 +77,7 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   max-width: 300px;
-  margin-top: 10px; /* Space between the calendar and the popup */
+  margin-top: 10px;
 }
 
 .events-popup h2 {
@@ -119,13 +103,66 @@ h1 {
   color: #999;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  backdrop-filter: blur(5px); /* Blur effect */
-  z-index: 900; /* Behind the popup */
+
+/* Enhanced styles for the events list on the left */
+.events-list {
+  background-color: #f7f7f7; /* Light background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 300px;
+  width: 60vh;
+}
+
+.events-list h2 {
+  font-weight: bolder;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #00796b; /* Stylish underline */
+  padding-bottom: 10px;
+}
+
+.events-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.events-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: rgb(256, 226, 226);
+  border-radius: 6px;
+  color: #00796b;
+  font-size: 16px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.events-list li:hover {
+  transform: translateY(-3px); /* Subtle lift effect on hover */
+  background-color: rgb(255, 199, 199); /* Darken on hover */
+}
+
+.events-list li strong {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #004d40;
+}
+
+/* Responsive styles for phone screens */
+@media (max-width: 768px) {
+  .calendar-wrapper {
+    flex-direction: column;
+    align-items: center;  /* Stack items vertically */
+  }
+
+  .calendar-container {
+    margin: 20px 0; /* Adjust margin for better spacing */
+  }
+
+  .events-list {
+    max-width: none; /* Remove max-width to take full width */
+    margin-bottom: 20px; /* Add margin to the bottom */
+  }
 }

@@ -2,10 +2,10 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <div className="bg-[rgb(243,244,246)] min-h-screen py-8"> {/* Outer Container with Background Color */}
+    <div className="bg-[rgb(256,226,226)] min-h-screen py-8"> {/* Outer Container with Background Color */}
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-center font-bold text-4xl my-10">About Us</h1>
-        <div className="bg-white p-8 rounded-3xl max-w-10xl mx-auto text-base leading-relaxed mb-12">
+        <div className="bg-[rgb(255,199,199)] p-8 rounded-3xl max-w-10xl mx-auto text-base leading-relaxed mb-12">
           <p>
           The campus includes several modern hostel blocks for both male and female students, with a capacity of up to 3,000 residents. Each hostel has its own mess hall, administrative office, and warden’s quarters for easy management. The rooms are well-furnished with comfortable amenities, making them conducive for both study and relaxation. Students benefit from free high-speed Wi-Fi, along with access to facilities like a gym, medical center, and nearby shopping and entertainment options, ensuring a balanced and enjoyable campus life.
 
