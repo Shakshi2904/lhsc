@@ -89,7 +89,7 @@ const App = () => {
   };
 
   return (
-    <div className=" bg-[rgb(256,226,226)] min-h-screen bg-gray-100 flex flex-col items-center justify-center relative px-4">
+    <div className=" bg-[rgb(256,226,226)] min-h-screen  flex flex-col items-center justify-center relative px-4">
       <h1 className="text-4xl font-bold mb-8">Previous Events</h1>
       <div className="w-full max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

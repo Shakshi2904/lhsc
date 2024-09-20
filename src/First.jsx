@@ -4,7 +4,7 @@ import Page from './Page.jsx';
 
 
 function First() {
-  const image = ['/image/intro1.jpg','/image/intro2.jpg','/image/intro3.jpg'];
+  const image = ['/image/intro2.jpg','/image/intro5.jpg','/image/intro1.jpg','/image/intro3.jpg','/image/intro5.jpg'];
   return (
     <div>
       <Navbar/>

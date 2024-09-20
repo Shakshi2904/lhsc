@@ -37,7 +37,7 @@ const FeedbackForm = () => {
   };
 
   return (
-    <div className="bg-[rgb(256,226,226)] min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-[rgb(256,226,226)] min-h-screen flex items-center justify-center  py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8 p-10 bg-[rgb(255,199,199)] rounded-xl shadow-md"> {/* Changed background color */}
         <h1 className="text-3xl font-bold text-center text-gray-900 mb-6">Feedback Form</h1>
         <form onSubmit={handleSubmit} className="space-y-4">

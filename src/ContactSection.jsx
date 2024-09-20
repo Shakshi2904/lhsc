@@ -38,7 +38,7 @@ const ContactSection = () => {
   
 
   return (
-    <div className="bg-[rgb(256,226,226)] flex flex-col lg:flex-row bg-gray-100 p-8 rounded-lg shadow-lg items-center">
+    <div className="bg-[rgb(256,226,226)] flex flex-col lg:flex-row  p-8 rounded-lg shadow-lg items-center">
       {/* Contact Table */}
       <div className="w-full lg:w-1/2 p-4 bg-[rgb(255,199,199)]  rounded-lg shadow-md">
         <h2 className="text-2xl font-semibold mb-4 text-gray-700 text-center">Contact Information</h2>

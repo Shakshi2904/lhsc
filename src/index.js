@@ -10,12 +10,14 @@ import AboutUs from './about.js';
 import MakersSection from './maker.js';
 import LostAndFound from './LostAndFound.jsx';
 import Cal from './cal.js';
+import Board from './board.js';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <First/>
     <App />
     <Cal/>
+    <Board/>
     <FeedbackForm/>
     <ContactSection/>
     <AboutUs/>
